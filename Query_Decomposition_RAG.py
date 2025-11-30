@@ -5,7 +5,7 @@ from pinecone import Pinecone
 from langchain_core.runnables import RunnablePassthrough
 from RAPTOR import *
 from AnyFile_Loader import *
-from langchain.load import dumps, loads
+from langchain_core.load import dumps, loads
 from dotenv import load_dotenv
 load_dotenv()
 
