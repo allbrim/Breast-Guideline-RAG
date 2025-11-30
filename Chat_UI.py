@@ -76,6 +76,10 @@ with st.sidebar:
         index=None,
         placeholder="Select the Model",
     )
+    
+    if not model_selected:
+        st.info("Please select a model to continue")
+        st.stop()
 
     api_key = st.sidebar.text_input('Enter API key for the AI Model (DeepSeek/OpenAI):', type='password', key='api_key')
     if not api_key:
