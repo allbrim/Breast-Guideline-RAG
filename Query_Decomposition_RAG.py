@@ -69,7 +69,19 @@ def setup_language_model_chain(vectorstore, topk: int):
                     Previous Conversation:
                     {chat_history}
 
-                    Answer the question comprehensively and with detailed logical points based on the following context and previous conversation:
+                    You are in Guideline Answer Mode. Use only the provided context and previous conversation.
+                    Provide the answer with the following required headers, each on its own line:
+                    Background:
+                    Recommendation:
+                    Qualifying statements:
+                    Key evidence:
+                    Justification:
+
+                    Rules:
+                    - Do not invent numbers. Any percentages, rates, or numeric claims must appear verbatim in the provided context.
+                    - If evidence is limited or confounded, state: "insufficient to prefer one approach overall".
+
+                    Context:
                     {context}
 
                     Question: {question}

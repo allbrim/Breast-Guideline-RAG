@@ -116,7 +116,7 @@ with st.sidebar:
     st.session_state.model_selected = model_selected
     
     if model_selected in ("o1-mini","o1"):
-        st.session_state.model = ChatOpenAI(temperature=1, model=st.session_state.model_selected)
+        st.session_state.model = ChatOpenAI(temperature=0, model=st.session_state.model_selected)
     elif model_selected in ("deepseek-chat","deepseek-reasoner"):
         st.session_state.deepseek_client = OpenAI(
             api_key=st.session_state.api_key_final,
@@ -208,7 +208,19 @@ if not disable_chat:
                     Previous Conversation:
                     {chat_history}
 
-                    Answer the question comprehensively and with detailed logical points based on the following context and previous conversation:
+                    You are in Guideline Answer Mode. Use only the provided context and previous conversation.
+                    Provide the answer with the following required headers, each on its own line:
+                    Background:
+                    Recommendation:
+                    Qualifying statements:
+                    Key evidence:
+                    Justification:
+
+                    Rules:
+                    - Do not invent numbers. Any percentages, rates, or numeric claims must appear verbatim in the provided context.
+                    - If evidence is limited or confounded, state: "insufficient to prefer one approach overall".
+
+                    Context:
                     {context}
 
                     Question: {question}
