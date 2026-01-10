@@ -30,8 +30,9 @@ def get_full_papers(docs):
     return [data[pid] for pid in paper_ids if pid in data]
 
 # Multi Query: Different Perspectives
-template_qd = """You generate 3–5 subquestions to support a guideline-style comparison.
+template_qd = """User question: {question}
 
+You generate 3–5 subquestions to support a guideline-style comparison.
 Rules:
 - Do NOT ask for exact complication rates or pooled percentages.
 - Do NOT ask “what is the rate of X” unless the user explicitly asks for a specific study’s rate.
