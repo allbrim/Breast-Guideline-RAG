@@ -206,7 +206,8 @@ if not disable_chat:
                 questions = generate_queries.invoke({"question": og_question})
                 display_generated_questions(questions)
                 
-                template = """You are answering as a multidisciplinary guideline committee.
+                template = """
+You are answering as a multidisciplinary guideline committee.
 
 Rules for the final answer:
 - Do NOT report exact complication rates or pooled percentages.
