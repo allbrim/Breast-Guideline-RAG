@@ -1,0 +1,54 @@
+{
+  "guideline_questions": [
+    {
+      "category": "Patient selection and risk factors",
+      "questions": [
+        "How does age influence complication rates after post-mastectomy breast reconstruction, and is age alone a reason to avoid reconstruction?",
+        "How does increasing BMI or obesity influence complications in implant-based versus autologous reconstruction?",
+        "How do smoking and diabetes affect complication risk, and are they contraindications or modifiable risk factors?",
+        "What is the impact of prior radiotherapy on complications and patient-reported outcomes by reconstruction type?"
+      ]
+    },
+    {
+      "category": "Timing and radiotherapy pathways",
+      "questions": [
+        "Among patients without radiotherapy, how do immediate and delayed reconstruction compare in overall and major complications?",
+        "Among patients without radiotherapy, how do immediate and delayed reconstruction compare in patient-reported outcomes?",
+        "In patients receiving radiotherapy, how do implant outcomes differ by timing, including contracture and implant loss?",
+        "What evidence supports waiting at least six months after radiotherapy before delayed reconstruction?"
+      ]
+    },
+    {
+      "category": "Nipple-sparing mastectomy",
+      "questions": [
+        "How do oncologic outcomes of nipple-sparing mastectomy compare to skin-sparing mastectomy?",
+        "What patient and tumor selection criteria are used for nipple-sparing mastectomy?",
+        "What evidence supports tumor-to-nipple distance thresholds and which cutoffs have been studied?",
+        "How accurate is frozen section of the nipple base for assessing nipple–areolar complex involvement?"
+      ]
+    },
+    {
+      "category": "Implant plane selection",
+      "questions": [
+        "How do prepectoral and subpectoral implant reconstructions compare in overall complications?",
+        "What evidence quantifies animation deformity and pain in subpectoral reconstruction?",
+        "What outcomes are reported after conversion from subpectoral to prepectoral implants?"
+      ]
+    },
+    {
+      "category": "ADM and synthetic mesh",
+      "questions": [
+        "How does acellular dermal matrix use compare to no ADM for infection, seroma, implant loss, and reoperation?",
+        "Which ADM or synthetic mesh products are evaluated and how comparable are the datasets?",
+        "How do studies address confounding between ADM use and implant plane selection?"
+      ]
+    },
+    {
+      "category": "Fat grafting and patient-reported outcomes",
+      "questions": [
+        "What evidence supports the oncologic safety of autologous fat grafting after breast cancer?",
+        "How should BREAST-Q results be interpreted using minimal important difference thresholds?"
+      ]
+    }
+  ]
+}

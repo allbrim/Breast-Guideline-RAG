@@ -8,6 +8,8 @@ import openai
 from openai import OpenAI
 from langchain_openai import OpenAI,OpenAIEmbeddings,ChatOpenAI
 from dotenv import load_dotenv
+import json
+GUIDELINE_SCOPE = json.load(open("guideline_questions.json"))["guideline_questions"]
 
 #################################################################################################################    
 ##################################   Util Functions   ###########################################################
