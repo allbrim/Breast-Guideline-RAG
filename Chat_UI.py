@@ -207,16 +207,28 @@ if not disable_chat:
                 display_generated_questions(questions)
                 
                 template = """
-                    Previous Conversation:
-                    {chat_history}
+You are answering as a multidisciplinary guideline committee.
 
-                    Answer the question comprehensively and with detailed logical points based on the following context and previous conversation:
-                    {context}
+Rules for the final answer:
+- Do NOT report exact complication rates or pooled percentages.
+- Do NOT ask “what is the rate of X” unless the user explicitly asked for a specific study’s rate.
+- Prefer comparative language: higher/lower/similar; which complications differ; under what patient selection.
+- Explicitly address key confounders when relevant: ADM use, radiation status, staging (expander vs direct-to-implant), follow-up duration, matching/adjustment.
+- If the user asks “overall complications,” interpret as overall directionality and consistency across studies, not a single numeric estimate.
+- Base all statements strictly on the provided context. If evidence is mixed or limited, say so.
 
-                    Question: {question}
+Previous Conversation:
+{chat_history}
 
-                    If the answer to the question is not present in the given context or previous conversation, respond with "I don't have enough information to answer this question."
-                    """
+Context:
+{context}
+
+Question:
+{question}
+
+If the answer is not supported by the context, respond exactly:
+"I don't have enough information to answer this question."
+"""
                 prompt1 = ChatPromptTemplate.from_template(template)
                 rag_results = []
                 

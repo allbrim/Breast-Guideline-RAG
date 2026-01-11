@@ -30,11 +30,17 @@ def get_full_papers(docs):
     return [data[pid] for pid in paper_ids if pid in data]
 
 # Multi Query: Different Perspectives
-template_qd = """You are a helpful assistant that generates multiple sub-questions related to an input question. \n
-The goal is to break down the input into a set of sub-problems / sub-questions that can be answered in isolation. \n
-Generate multiple search queries related to: {question} \n
-Output (5 queries):
-Just give me the question and not your thought process.
+template_qd = """User question: {question}
+
+You generate 3–5 subquestions to support a guideline-style comparison.
+Rules:
+- Do NOT ask for exact complication rates or pooled percentages.
+- Do NOT ask “what is the rate of X” unless the user explicitly asks for a specific study’s rate.
+- Prefer comparative questions: “higher/lower/similar,” “which complications differ,” “under what patient selection.”
+- Require confounders: ADM use, radiation status, staging (expander vs direct-to-implant), follow-up duration, matching/adjustment.
+- If the user asks “overall complications,” interpret as “overall directionality and consistency across studies,” not a single numeric estimate.
+
+Output only the subquestions.
 """
 prompt_decomposition = ChatPromptTemplate.from_template(template_qd)
 
